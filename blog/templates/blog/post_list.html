@@ -13,8 +13,13 @@
       <em>buonasera</em>
       <br <strong>bienvenue</strong>
       <ul><li>primo elemento</li><li>secondo elemento</li></ul>
-      <div><strong>home</strong>
-      </div>
+      {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
         <p>It works!</p>
     </body>
 </html>
